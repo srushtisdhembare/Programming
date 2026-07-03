@@ -1,0 +1,44 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to check whether a no. is +ve , -ve or zero
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+
+class program17
+{
+    public static void main(String A[])
+    {
+        Logic lobj = new Logic();
+        lobj.CheckSign(-8);   
+    }
+
+}
+
+class Logic
+{
+    void CheckSign(int num)
+    {
+        if(num < 0)
+        {
+            System.out.println("It is  a negative number");
+        }
+        else if(num == 0)
+        {
+            System.out.println("It is  a zero");
+        }
+        else
+        {
+            System.out.println("It is  a positive number");
+        }
+        
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Output : It is a negative number
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 

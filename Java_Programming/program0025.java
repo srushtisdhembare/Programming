@@ -1,0 +1,41 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to print all nos from 1 to N that are divisible by both 2 & 3
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+
+class program20
+{
+    public static void main(String A[])
+    {
+        Logic lobj = new Logic();
+        lobj.PrintDivisibleBy2and3(30);   
+    }
+
+}
+
+class Logic
+{
+    void PrintDivisibleBy2and3(int num)
+    {
+        int iCnt = 0, iCount = 0;
+        
+        for(iCnt = 1; iCnt <= num; iCnt++)
+        {
+            if((iCnt % 2 == 0) && (iCnt % 3 == 0))
+            {
+                System.out.println(iCnt);
+            }
+        }
+        
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Output : 6   12  18  24  30
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 

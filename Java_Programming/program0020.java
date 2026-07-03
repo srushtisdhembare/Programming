@@ -1,0 +1,45 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to find smallest digit of given number 
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+
+class program19
+{
+    public static void main(String A[])
+    {
+        Logic lobj = new Logic();
+        lobj.FindSmallestDigit(83429);   
+    }
+
+}
+
+class Logic
+{
+    void FindSmallestDigit(int num)
+    {
+        int iCnt = 0,iDigit = 0, iMin = num % 10;
+
+        while(num != 0)
+        {
+            iDigit = num % 10;
+            if(iDigit < iMin)
+            {
+                iMin = iDigit;
+            }
+            num = num/10;
+
+        }
+        System.out.println("Smallest Digit is : "+iMin);
+           
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Output : 2   
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 

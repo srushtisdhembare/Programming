@@ -1,0 +1,42 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to calculate product of digits of a number 
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+
+class program20
+{
+    public static void main(String A[])
+    {
+        Logic lobj = new Logic();
+        lobj.ProductOfDigits(234);   
+    }
+
+}
+
+class Logic
+{
+    void ProductOfDigits(int num)
+    {
+        int iCnt = 0,iDigit = 0, iProduct = 1;
+
+        while(num != 0)
+        {
+            iDigit = num % 10;
+            iProduct = iProduct * iDigit;
+            num = num/10;
+
+        }
+        System.out.println("Product Of Digits : "+iProduct);
+           
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Output : Product Of Digits : 24   
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 

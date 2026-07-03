@@ -1,0 +1,44 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to find largest digit of given number 
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+
+class program19
+{
+    public static void main(String A[])
+    {
+        Logic lobj = new Logic();
+        lobj.FindLargestDigit(83429);   
+    }
+
+}
+
+class Logic
+{
+    void FindLargestDigit(int num)
+    {
+        int iCnt = 0,iDigit = 0, iMax = 1;
+        while(num != 0)
+        {
+            iDigit = num % 10;
+            if(iDigit > iMax)
+            {
+                iMax = iDigit;
+            }
+            num = num/10;
+
+        }
+        System.out.println("Largest Digit is : "+iMax);
+           
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Output : 9    
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
