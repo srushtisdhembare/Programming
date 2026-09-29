@@ -1,0 +1,78 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Include required header files
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+
+#define TRUE 1
+#define FALSE 0
+
+typedef int BOOL;
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name : Display
+//  Input         : char
+//  Output        : BOOL
+//  Description   : Use to check if i/p char is a special symbol
+//  Date          : 29/09/2026
+//  Author        : Srushti Sachin Dhembare
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+BOOL ChkSpecial(char ch)
+{
+   if((ch == '!') || 
+      (ch == '@') ||
+      (ch == '#') ||
+      (ch == '$') ||
+      (ch == '%') ||
+      (ch == '^') ||
+      (ch == '&') ||
+      (ch == '*'))
+   {
+        return TRUE;
+   }
+   else 
+   {
+        return FALSE;
+   }
+     
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to accept character from user and check if its a special symbol or not.
+// i.e (!,@,#,$,%,^,&,*)
+/////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = '\0';
+    BOOL bRet = FALSE;
+
+    printf("Enter the character :\n");
+    scanf("%c",&cValue);
+
+    bRet = ChkSpecial(cValue);
+
+    if(bRet == TRUE)
+    {
+          printf("It is a special Character.\n");
+    }
+    else
+    {
+          printf("It is not a special Character.\n");
+    }
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Input  : &
+// Output : It is a special character
+// Input  : m
+// Output : It is not a special character
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
