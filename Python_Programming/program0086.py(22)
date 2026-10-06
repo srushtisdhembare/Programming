@@ -1,0 +1,38 @@
+# Application to accept a list of integers and use Pool.map() to calculate factorial for every element in the list
+# Display process id , factorial, input no.
+
+import os
+import multiprocessing
+
+def Factorial(No):
+    Fact = 1
+
+    for i in range(1,No + 1):
+        Fact = Fact * i 
+
+    print("Process running with PID : ",os.getpid())
+    print("Factorial is : ", Fact)
+    
+    return Fact
+
+def main():
+    print("Enter number of elements in list : ")
+    number = int(input())
+
+    Elements = list()
+
+    for i in range(1,number+1):
+        num = int(input())
+        Elements.append(num)
+
+    pobj = multiprocessing.Pool()
+
+    result = pobj.map(Factorial,Elements)
+
+    pobj.close()
+    pobj.join()
+
+    print("Result is : ",result)
+
+if __name__ == "__main__":
+    main()
