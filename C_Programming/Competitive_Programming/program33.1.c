@@ -1,0 +1,76 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Include required header files
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+#include<string.h>
+
+#define TRUE 1
+#define FALSE 0
+typedef int BOOL;
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name : ChkChar
+//  Input         : char array, char
+//  Output        : BOOL
+//  Description   : Use to accept string & char and check if char is present in string
+//  Date          : 7/10/2026
+//  Author        : Srushti Sachin Dhembare
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+BOOL ChkChar(char *str, char ch)
+{
+    int iCount = 0;
+    BOOL bFlag = FALSE;
+
+    for(int iCnt = 0; iCnt < strlen(str); iCnt++)
+    {
+        if(str[iCnt] == ch)
+        {
+            bFlag = TRUE;
+        }  
+    } 
+     return bFlag;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to to accept string and char and check if the char is present in string or not
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[20];
+    char cValue;
+    BOOL bRet = FALSE;
+    
+    printf("Enter string :\n");
+    scanf("%[^'\n']s",arr);
+
+    printf("Enter character :\n");
+    scanf(" %c",&cValue);
+
+    bRet = ChkChar(arr,cValue);
+    if(bRet)
+    {
+        printf("TRUE\n");
+    }
+    else 
+    {
+        printf("FALSE\n");
+    }
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Input  : Enter string :Bon Apetit
+//  Enter character : e
+// Output :TRUE
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
